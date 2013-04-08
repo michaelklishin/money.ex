@@ -3,7 +3,7 @@ defmodule MoneyEx.Mixfile do
 
   def project do
     [ app: :money_ex,
-      version: "1.0.0-alpha1",
+      version: "1.0.0-alpha2",
       deps: deps ]
   end
 
