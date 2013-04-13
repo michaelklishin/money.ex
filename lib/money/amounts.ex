@@ -171,7 +171,7 @@ defmodule Money.Amounts do
 
   # TODO: total
 
-  @spec multiply(Money.t, amount) :: Money.t
+  @spec multiply(Money.t, Money.amount) :: Money.t
   def multiply(a, b) do
     x = :decimal.multiply(a.amount, b)
     Money.new(currency_unit: a.currency_unit, amount: x)
@@ -182,7 +182,7 @@ defmodule Money.Amounts do
     Money.new(currency_unit: a.currency_unit, amount: x)
   end
 
-  @spec divide(Money.t, amount) :: Money.t
+  @spec divide(Money.t, Money.amount) :: Money.t
   def divide(a, b) do
     x = :decimal.divide(a.amount, b)
     Money.new(currency_unit: a.currency_unit, amount: x)
