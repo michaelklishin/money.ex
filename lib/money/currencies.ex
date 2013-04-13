@@ -10,6 +10,9 @@ defmodule Money.Currencies do
     """
   end
 
+  @spec by_name(Money.iso_code) :: Currency.t
+  @spec by_code(Money.numeric_code) :: Currency.t
+
 
   rows = Enum.drop(File.iterator!(Path.expand("../currencies.csv", __FILE__)), 1)
 
@@ -20,12 +23,12 @@ defmodule Money.Currencies do
      lc name inlist [iso_code, 
                      String.downcase(iso_code), 
                      binary_to_atom(iso_code), binary_to_atom(String.downcase(iso_code))] do
+
        def by_name(unquote(name)) do
          Currency.new(code: unquote(iso_code), numeric: unquote(numeric_code), decimal_places: unquote(binary_to_integer(decimal_places)), country_codes: unquote(country_codes))
        end
      end
   end
-
 
   Enum.each rows, fn(line) ->
      [iso_code, numeric_code, decimal_places, country_code_line] = String.split(line, ",")
