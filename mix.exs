@@ -12,9 +12,8 @@ defmodule MoneyEx.Mixfile do
     []
   end
 
-  # Returns the list of dependencies in the format:
-  # { :foobar, "0.1", git: "https://github.com/elixir-lang/foobar.git" }
+  # Type `mix help deps` for more examples and options
   defp deps do
-    [{:decimal, github: "tim/erlang-decimal"}]
+    [{:decimal, github: "tim/erlang-decimal", ref: "v0.2.0"}]
   end
 end
