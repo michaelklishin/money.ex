@@ -1,2 +1,2 @@
-[ "decimal": {:git,"https://github.com/tim/erlang-decimal.git","aa775ffd138b966265d632d5c97e91eff616281b",[]},
-  "erlang_decimal": {:git,"https://github.com/tim/erlang-decimal.git","aa775ffd138b966265d632d5c97e91eff616281b",[]} ]
+%{"decimal": {:package, "0.2.0"},
+  "erlang_decimal": {:git, "https://github.com/tim/erlang-decimal.git", "aa775ffd138b966265d632d5c97e91eff616281b", []}}
