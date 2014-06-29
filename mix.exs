@@ -14,6 +14,6 @@ defmodule MoneyEx.Mixfile do
 
   # Type `mix help deps` for more examples and options
   defp deps do
-    [{:decimal, github: "tim/erlang-decimal", ref: "v0.2.0"}]
+    [{:decimal, "0.2.0"}]
   end
 end
